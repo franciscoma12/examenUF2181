@@ -1,9 +1,20 @@
 
 package libs;
+/**
+ * 
+ * @author Francisco Manuel Aguilar Torres
+ *
+ */
 
 
 public class Funciones {
-	
+	/**
+	 * Método que se le pasan 3 números y devuelve el número central del mismo.
+	 * @param num1 primero número entero que se le pasa.
+	 * @param num2 segundo número entero que se le pasa.
+	 * @param num3 tercer número entero que se le pasa.
+	 * @return devuelve el número central de los antes mencionados.
+	 */
 	public int devuelveCentral(int num1, int num2, int num3) {
 		
 		int enMedio;
@@ -17,7 +28,11 @@ public class Funciones {
 		}
 		return enMedio;
 	}
-	
+	/**
+	 * Método que se le pasa un año y debe de indicar si el año es bisiesto o no.
+	 * @param año el año que queremos comprobar.
+	 * @return devuelve true si es bisiesto y false si no lo es.
+	 */
 	public boolean esBisiesto(int año) {
 		boolean bisiesto = false;
 		if (año %4 == 0 ) {
@@ -27,11 +42,15 @@ public class Funciones {
 				bisiesto=true;
 			}
 		} else  {
-			bisiesto=true;
+			bisiesto=false;
 		}
 		return bisiesto;
 	}
-	
+	/**
+	 * Método que se le pasa un array de números y nos indica si es capicua o no.
+	 * @param v es el array que se le pasa.
+	 * @return nos devuelve si en efecto ese número es capicua con true o si no lo es con false.
+	 */
 	public static boolean esCapicua(int v[]) {
 		boolean capicua = true;
 		
@@ -42,8 +61,14 @@ public class Funciones {
 		}
 		return capicua;
 	}
-
-	public static int [] suma_vectores(int v[], int v2[]) {
+	/**
+	 * Método para sumar 2 vectores de tamaños iguales.
+	 * @param v es el primer array que se le pasa.
+	 * @param v2 es el segundo array que se le pasa.
+	 * @return devuelve la suma de los 2 arrays anteriores.
+	 * @throws hay una excepción, ya que si uno de los 2 Arrays no es del mismo tamaño, te da fallo. 
+	 */
+	public int [] suma_vectores(int v[], int v2[]) {
 		int vector_suma [] = new int[v.length];
 		
 		if (v.length!=v2.length) 
